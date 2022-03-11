@@ -1,0 +1,27 @@
+#yugabyte.sql.datasource.url = "jdbc:postgresql://yb-tservers.yb-demo.svc.cluster.local:5433/yugabyte"
+#yugabyte.sql.datasource.url = "jdbc:postgresql://localhost:5433/yugabyte"
+spring:
+  application:
+    name: cart-microservice
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    #url: jdbc:postgresql://127.0.0.1:5433/postgres
+    url: jdbc:postgresql://localhost:5433/yugabyte
+    username: yugabyte
+    password: ""
+logging:
+  level:
+    root: debug
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+    org.hibernate.type.descriptor.BasicBinder: trace
