@@ -19,7 +19,7 @@ spring:
     #url: jdbc:postgresql://localhost:5433/yugabyte
     url: jdbc:postgresql://yb-tserver-0.yb-tservers.yb1.svc.cluster.local:5433/yugabyte
     username: yugabyte
-    password: "Yugabyte1!"
+    password: "${DB_PASSWORD:yugabyte}"
 logging:
   level:
     root: debug
