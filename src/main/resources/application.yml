@@ -17,9 +17,9 @@ spring:
   datasource:
     #url: jdbc:postgresql://127.0.0.1:5433/postgres
     #url: jdbc:postgresql://localhost:5433/yugabyte
-    url: jdbc:postgresql://yb-tserver-0.yb-tservers.yb.svc.cluster.local:5433/yugabyte
+    url: jdbc:postgresql://yb-tserver-0.yb-tservers.yb1.svc.cluster.local:5433/yugabyte
     username: yugabyte
-    password: ""
+    password: "Yugabyte1!"
 logging:
   level:
     root: debug
